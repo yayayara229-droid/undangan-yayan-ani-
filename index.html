@@ -18,6 +18,7 @@ display:flex;
 justify-content:center;
 align-items:center;
 height:100vh;
+position:relative;
 }
 
 .photo{
@@ -36,6 +37,7 @@ border-radius:15px;
 width:30%;
 text-align:center;
 padding:20px;
+position:relative;
 }
 
 h1{
@@ -57,6 +59,19 @@ font-size:18px;
 margin-top:15px;
 }
 
+/* gorilla shadow */
+
+.gorilla{
+position:absolute;
+width:260px;
+left:50%;
+top:50%;
+transform:translate(-50%,-50%);
+opacity:0.2;
+filter:blur(2px);
+z-index:-1;
+}
+
 </style>
 
 </head>
@@ -70,6 +85,8 @@ margin-top:15px;
 </div>
 
 <div class="middle">
+
+<img src="gorilla.png" class="gorilla">
 
 <div class="flower">🌸🌷🌸</div>
 
