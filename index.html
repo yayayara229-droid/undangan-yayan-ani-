@@ -72,7 +72,7 @@ filter:blur(0.2px);
 z-index:-1;
 }
 
-/* FOTO YANG MUNCUL SETELAH 3 DETIK */
+/* popup gambar */
 
 .popup{
 position:fixed;
@@ -80,7 +80,7 @@ top:0;
 left:0;
 width:100%;
 height:100%;
-background:rgba(0,0,0,0.8);
+background:rgba(0,0,0,0.85);
 display:none;
 justify-content:center;
 align-items:center;
@@ -130,18 +130,28 @@ box-shadow:0 0 20px black;
 
 </div>
 
-<!-- FOTO POPUP -->
+<!-- POPUP FOTO -->
 
 <div class="popup" id="popupFoto">
 <img src="foto_popup.png">
 </div>
 
+<!-- AUDIO -->
+
+<audio id="suara">
+<source src="suara.mp3" type="audio/mpeg">
+</audio>
+
 <script>
 
-/* tampilkan foto setelah 3 detik */
+/* popup setelah 3 detik + suara */
 
 setTimeout(function(){
+
 document.getElementById("popupFoto").style.display="flex";
+
+document.getElementById("suara").play();
+
 },3000);
 
 </script>
