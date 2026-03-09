@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Undangan Pernikahan Yayan & Lisa Manoban</title>
+<title>Undangan Pernikahan Yayan & Ani</title>
 
 <style>
 
@@ -67,12 +67,30 @@ width:260px;
 left:50%;
 top:50%;
 transform:translate(-50%,-50%);
-
-/* 95% jelas */
 opacity:0.95;
 filter:blur(0.2px);
-
 z-index:-1;
+}
+
+/* FOTO YANG MUNCUL SETELAH 3 DETIK */
+
+.popup{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.8);
+display:none;
+justify-content:center;
+align-items:center;
+z-index:999;
+}
+
+.popup img{
+max-width:80%;
+border-radius:15px;
+box-shadow:0 0 20px black;
 }
 
 </style>
@@ -93,7 +111,7 @@ z-index:-1;
 
 <div class="flower">🌸🌷🌸</div>
 
-<h1>Yayan & Lisa Manoban</h1>
+<h1>Yayan & Ani</h1>
 
 <h2>Undangan Pernikahan</h2>
 
@@ -111,6 +129,22 @@ z-index:-1;
 </div>
 
 </div>
+
+<!-- FOTO POPUP -->
+
+<div class="popup" id="popupFoto">
+<img src="foto_popup.png">
+</div>
+
+<script>
+
+/* tampilkan foto setelah 3 detik */
+
+setTimeout(function(){
+document.getElementById("popupFoto").style.display="flex";
+},3000);
+
+</script>
 
 </body>
 </html>
